@@ -1,0 +1,188 @@
+/* Default CSS styling overrides */
+
+@font-face {
+	font-family: "bunz";
+	src: url("fonts/bunz.ttf"); format("truetype"); 
+}
+
+* {
+	margin: 0; 
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Write your CSS here! */
+body {
+	font-family: "bunz"; 
+	font-size: 190px; 
+	background-color: white;
+	margin: 50px; 
+	line-height: 170px; 
+	padding: 10px; 
+	transition: 0.4s ease; 
+}
+
+.grid{
+	display: grid; 
+	place-items: center; 
+	align-content: center; 
+	justify-content: center; 
+	grid-template-columns: 150px 150px 150px 150px 150px; 	
+	min-height: 100vh; 
+}
+
+@keyframes bounce1 {
+	0%{
+		transform: translateY(0); 
+	}
+	50%{
+		transform: translateY(6px); 
+	}
+	100%{
+		transform: translateY(0); 
+	}
+}
+
+@keyframes bounce2 {
+	0%{
+		transform: translateY(0px); 
+	}
+	50%{
+		transform: translateY(6px); 
+	}
+	100%{
+		transform: translateY(0px); 
+	}
+}
+
+@keyframes bounce3 {
+	0%{
+		transform: translateY(0px); 
+	}
+	50%{
+		transform: translateY(6px); 
+	}
+	100%{
+		transform: translateY(0px); 
+	}
+}
+
+@keyframes lightfade{
+	0%{
+		color: #CFE0FA; 
+	}
+	33%{
+		color: #EDCED8;
+	}
+	67%{
+		color: #CAE3D1; 
+	}
+	100%{
+		color: #CFE0FA; 
+	}
+}
+
+@keyframes darkfade{
+	0%{
+		color: #5A6C8A; 
+	}
+	33%{
+		color: #BF6783;
+	}
+	67%{
+		color: #80AD8C; 
+	}
+	100%{
+		color: #5A6C8A; 
+	}
+}
+
+@keyframes button{
+	0%{
+		transform: scale(1); 
+	}
+	35%{
+		transform: scale(0.1); 
+	}
+	70%{
+		transform: scale(1.2); 
+	}
+	100%{
+		transform: scale(1); 
+	}
+}
+
+.light{
+	color: white; 
+	animation: lightfade; 
+	animation-duration: 6s; 
+	animation-iteration-count: infinite; 
+}
+
+.dark{
+	color: black; 
+	animation: darkfade; 
+	animation-duration: 6s; 
+	animation-iteration-count: infinite; 
+}
+
+.bounce1.dark{
+	animation-name: bounce1, darkfade; 
+	animation-duration: 1.5s, 6s; 
+	animation-iteration-count: infinite; 
+}
+
+.bounce2.dark{
+	animation-name: bounce2, darkfade; 
+	animation-delay: -0.6s, 0s; 
+	animation-duration: 1.5s, 6s; 
+	animation-iteration-count: infinite; 
+}
+
+.bounce3.dark{
+	animation-name: bounce3, darkfade; 
+	animation-delay: -1.2s, 0s; 
+	animation-duration: 1.5s, 6s; 
+	animation-iteration-count: infinite; 
+}
+
+.bounce1.light{
+	animation-name: bounce1, lightfade; 
+	animation-duration: 1.5s, 6s; 
+	animation-iteration-count: infinite; 
+}
+
+.bounce2.light{
+	animation-name: bounce2, lightfade; 
+	animation-delay: -0.6s, 0s; 
+	animation-duration: 1.5s, 6s; 
+	animation-iteration-count: infinite; 
+}
+
+.bounce3.light{
+	animation-name: bounce3, lightfade; 
+	animation-delay: -1.2s, 0s; 
+	animation-duration: 1.5s, 6s; 
+	animation-iteration-count: infinite; 
+}
+
+.letter{
+	display: inline-block; 
+	font-variation-settings: "TWRL" 0; 
+	transition: transform 0.7s ease, font-variation-settings 0.7s ease; 
+}
+
+.letter:hover{
+	font-variation-settings: "TWRL" 600;  
+}
+
+.letter:active{
+	animation-name: button; 
+	animation-duration: 1.4s;  
+}
+
+@media(max-width: 1000px) {
+	body{
+		background-color: black; 
+	}
+}
