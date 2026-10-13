@@ -101,11 +101,8 @@ body {
 	0%{
 		transform: scale(1); 
 	}
-	35%{
-		transform: scale(0.1); 
-	}
-	70%{
-		transform: scale(1.2); 
+	50%{
+		transform: scale(0); 
 	}
 	100%{
 		transform: scale(1); 
@@ -169,7 +166,7 @@ body {
 .letter{
 	display: inline-block; 
 	font-variation-settings: "TWRL" 0; 
-	transition: transform 1s ease, font-variation-settings 0.7s ease; 
+	transition: transform 1s ease, font-variation-settings 0.7s ease, rotate 0.4s ease; 
 }
 
 .letter:hover{
@@ -178,10 +175,11 @@ body {
 
 .letter:active{
 	animation-name: button; 
-	animation-duration: 1.3s;  
+	animation-duration: 1.2s;  
+	rotate: 360deg; 
 }
 
-@media(max-width: 1000px) {
+@media(max-width: 850px) {
 	body{
 		background-color: white; 
 	}
