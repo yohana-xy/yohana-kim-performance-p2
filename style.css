@@ -15,7 +15,7 @@
 body {
 	font-family: "bunz"; 
 	font-size: 190px; 
-	background-color: white;
+	background-color: black;
 	margin: 50px; 
 	line-height: 170px; 
 	padding: 10px; 
@@ -169,7 +169,7 @@ body {
 .letter{
 	display: inline-block; 
 	font-variation-settings: "TWRL" 0; 
-	transition: transform 0.7s ease, font-variation-settings 0.7s ease; 
+	transition: transform 1s ease, font-variation-settings 0.7s ease; 
 }
 
 .letter:hover{
@@ -178,11 +178,11 @@ body {
 
 .letter:active{
 	animation-name: button; 
-	animation-duration: 1.4s;  
+	animation-duration: 1.3s;  
 }
 
 @media(max-width: 1000px) {
 	body{
-		background-color: black; 
+		background-color: white; 
 	}
 }
